@@ -25,14 +25,36 @@ class show10yearViewController: UIViewController {
     
     @IBOutlet weak var datePickerShow: UIDatePicker!
     @IBOutlet weak var yearSlider: UISlider!
+    @IBOutlet weak var autoPlaySwitch: UISwitch!
+    
+    var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initial()
         getJsonFromFlickr()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in
+            if self.autoPlaySwitch.isOn{
+                var yearIndex = Int((self.yearSlider.value))
+                print(yearIndex)
+                if yearIndex >= 9{
+                    yearIndex = 0
+                }else{
+                    yearIndex += 1
+                }
+                self.showAfterImage(yearIndex)
+                self.updateDatePicker(yearIndex)
+                //update slider
+                self.yearSlider.setValue(Float(yearIndex), animated: true)
+                self.updateYearLabel(yearIndex)
+            }else{
+                print("Don't auto play")
+            }
+        })
     }
     func initial(){
         initTime()
+        autoPlaySwitch.setOn(false, animated: true)
         //init photos for array remove/insert
         let photoInit = Photo(farm: 0, secret: "0", id: "0", server: "0", title: "0")
         photos = [Photo](repeating: photoInit, count: 10)
@@ -142,13 +164,12 @@ class show10yearViewController: UIViewController {
     func initTime(){
         //init datePicker
         var yearString = yearStart.description
-        let date = "\(yearString)/11/11"
         let dateMin = "\(yearString)/01/01"
         yearString = (yearStart+9).description
         let dateMax = "\(yearString)/12/31"
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
-        var datePickerInit = formatter.date(from: date)!
+        var datePickerInit = formatter.date(from: dateMin)!
         datePickerShow.setDate(datePickerInit, animated: true)
         datePickerInit = formatter.date(from: dateMin)!
         datePickerShow.minimumDate = datePickerInit
@@ -164,6 +185,10 @@ class show10yearViewController: UIViewController {
         //init font label
         searchTextCount.text = String("字數：0")
         fontSize.text = String("Size：20")
+        let font = sloganLabel.font!
+        let newfont = font.withSize(CGFloat(20))
+        sloganLabel.font = newfont
+        searchTextField.font = newfont
     }
     func updateDatePicker(_ yearIndex:Int){
         //update datePicker
