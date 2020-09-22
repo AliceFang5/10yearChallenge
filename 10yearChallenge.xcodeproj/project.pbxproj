@@ -13,6 +13,9 @@
 		64BBA9BE24EFB7850092D01C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64BBA9BC24EFB7850092D01C /* Main.storyboard */; };
 		64BBA9C024EFB7880092D01C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64BBA9BF24EFB7880092D01C /* Assets.xcassets */; };
 		64BBA9C324EFB7880092D01C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64BBA9C124EFB7880092D01C /* LaunchScreen.storyboard */; };
+		64BBA9CB24EFB81C0092D01C /* show10yearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BBA9CA24EFB81C0092D01C /* show10yearViewController.swift */; };
+		64BBA9CD24EFBDAD0092D01C /* flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BBA9CC24EFBDAD0092D01C /* flickr.swift */; };
+		64BBA9CF24EFBF1E0092D01C /* flickrUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BBA9CE24EFBF1E0092D01C /* flickrUrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		64BBA9BF24EFB7880092D01C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64BBA9C224EFB7880092D01C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64BBA9C424EFB7880092D01C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64BBA9CA24EFB81C0092D01C /* show10yearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = show10yearViewController.swift; sourceTree = "<group>"; };
+		64BBA9CC24EFBDAD0092D01C /* flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickr.swift; sourceTree = "<group>"; };
+		64BBA9CE24EFBF1E0092D01C /* flickrUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flickrUrl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				64BBA9B824EFB7850092D01C /* SceneDelegate.swift */,
 				64BBA9BA24EFB7850092D01C /* ViewController.swift */,
 				64BBA9BC24EFB7850092D01C /* Main.storyboard */,
+				64BBA9CA24EFB81C0092D01C /* show10yearViewController.swift */,
+				64BBA9CC24EFBDAD0092D01C /* flickr.swift */,
+				64BBA9CE24EFBF1E0092D01C /* flickrUrl.swift */,
 				64BBA9BF24EFB7880092D01C /* Assets.xcassets */,
 				64BBA9C124EFB7880092D01C /* LaunchScreen.storyboard */,
 				64BBA9C424EFB7880092D01C /* Info.plist */,
@@ -139,7 +148,10 @@
 			files = (
 				64BBA9BB24EFB7850092D01C /* ViewController.swift in Sources */,
 				64BBA9B724EFB7850092D01C /* AppDelegate.swift in Sources */,
+				64BBA9CF24EFBF1E0092D01C /* flickrUrl.swift in Sources */,
+				64BBA9CD24EFBDAD0092D01C /* flickr.swift in Sources */,
 				64BBA9B924EFB7850092D01C /* SceneDelegate.swift in Sources */,
+				64BBA9CB24EFB81C0092D01C /* show10yearViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
